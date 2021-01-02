@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Game
 {
-    class NumberCell : Cell
+    public class NumberCell : Cell
     {
         public int Value { get; private set; }
 

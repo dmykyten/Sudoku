@@ -16,4 +16,22 @@
     <ProjectReference Include="..\Game\Game.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Board1Valid.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Boards\BoardHorizontalError.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Boards\BoardTileError.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Boards\BoardValid.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Boards\BoardVerticalError.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

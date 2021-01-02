@@ -4,7 +4,7 @@ namespace Game
 {
     public class Board
     {
-        const int SIZE = 9;
+        public const int SIZE = 9;
         public Cell[,] Cells { get; private set; } = new Cell[SIZE,SIZE];
         public Board(string[] lines)
         {
@@ -25,32 +25,9 @@ namespace Game
                 }
             }
         }
-
-        //debug purposes
-        public string[] AsStrings()
-        {
-            string[] lines = new string[9];
-            for (int i = 0; i != SIZE; i++)
-            {
-                string line = "";
-                for (int j = 0; j != SIZE; j++)
-                {
-                    if(Cells[i, j].isEmpty == true)
-                    {
-                        line += ".";
-                    }
-                    else
-                    {
-                        line += ((NumberCell)Cells[i, j]).Value;
-                    }
-                }
-                lines[i] = line;
-            }
-            return lines;
-        }
-        public static bool IsValid()
-        {
-            return false;
+        public bool IsValid()
+        {   
+            return new Validator(this).IsValid();
         }
     }
 }
