@@ -19,5 +19,16 @@ namespace Game
         {
             return $"NumberCell({Value})";
         }
+
+        public override int GetHashCode()
+        {
+            return Value;
+        }
+
+        public override bool Equals(object obj)
+        {
+
+            return obj != null && obj.GetType() == GetType() && ((NumberCell)obj).Value == Value;
+        }
     }
 }

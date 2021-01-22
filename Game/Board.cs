@@ -6,7 +6,7 @@ namespace Game
     {
         public const int SIZE = 9;
         public Cell[,] Cells { get; private set; } = new Cell[SIZE,SIZE];
-        public Board(string[] lines)
+        public Board(string[] lines) 
         {
             for(int i = 0; i != lines.Length; i++)
             {
@@ -28,6 +28,11 @@ namespace Game
         public bool IsValid()
         {   
             return new Validator(this).IsValid();
+        }
+
+        public Board Generate(int filledCells)
+        {
+            return new Generator(this).GetBoard(filledCells);
         }
     }
 }
